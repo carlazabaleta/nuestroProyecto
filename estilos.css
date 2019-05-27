@@ -1,0 +1,112 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image:url();
+  background-repeat: no-repeat;
+}
+
+.container-form{
+  position: relative;
+  background: #33F3FF;
+  width: 100%;
+  max-width: 500px;
+  min-width: 48px auto;
+  border-radius: 5px;
+}
+
+.container-form .toggle{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border-top: 5px solid #7F33FF;
+  border-bottom: 5px solid #7F33FF;
+  cursor: pointer;
+}
+
+.container-form .toggle span{
+  letter-spacing: 1px;
+}
+
+.container-form .toggle:hover{
+  border-top: 5px solid #664284;
+  border-bottom: 5px solid #664284;
+}
+
+.container-form h2{
+  margin: 0 0 28px 0;
+  font-size: 400;
+  line-height: 1;
+}
+
+.container-form input[type="text"],
+.container-form input[type="password"],
+.container-form input[type="email"]{
+  outline: none;
+  background: #EAE6EE;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: #fff;
+  border:none;
+  border-radius: 2px;
+  border-bottom: 4px solid #7F33FF;
+  font-size: 14px;
+  font-weight: normal;
+  margin:0 0 20px 0;
+}
+
+.container-form input[type="text"]:focus,
+.container-form input[type="password"]:focus,
+.container-form input[type="email"]:focus{
+border-bottom: 4px solid #664284;
+}
+
+.container-form input[type="submit"]{
+  background: #664284;
+  color: #fff;
+  border:none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-form input[type="submit"]:hover {
+  background:#D8C0ED  ;
+}
+
+.container-form .reset-password{
+  background:#FF7C2F;
+  color: #fff;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container-form .reset-password a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container-form .formulario{
+  padding: 40px;
+  display: none;
+}
+
+.container-form .formulario:nth-child(2){
+  display: block;
+}
