@@ -1,0 +1,42 @@
+/*aside , .container, article, section{
+  border-color: red;
+  border-style: dashed;
+}*/
+
+.nav{
+  justify-content: space-between;
+}
+
+
+.go-to-top{
+  position: fixed;
+  margin-left: 2em;
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9));
+  text-shadow: black 0.05em 0.05em;
+}
+
+.content-to-right{
+  text-align: right;
+}
+
+aside article{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#background_usercard{
+  background-image: linear-gradient(rgba(50, 0, 25, 0.9), rgba(255, 255, 255, 0.9)),
+  url("../imgs/bckg-user.jpg");
+}
+
+#nav{
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9))
+}
+
+.icon-size{
+  width: 20px;
+}
+
+#projects{
+  margin-top: 4em;
+}
