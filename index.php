@@ -53,21 +53,22 @@
 
 <div class="wrapper">
   <div class="letters">
+    <span class="letter">A</span>
     <span class="letter">C</span>
-    <span class="letter">A</span>
-    <span class="letter">R</span>
-    <span class="letter">L</span>
-    <span class="letter">A </span><?= " "?>
     <span class="letter">E</span>
-    <span class="letter">S</span>
-    <span class="letter">T</span>
-    <span class="letter">U</span>
-    <span class="letter">V</span>
-    <span class="letter">O </span>
+    <span class="letter">R</span>
+    <span class="letter">C </span><?= " "?>
     <span class="letter">A</span>
-    <span class="letter">Q</span>
-    <span class="letter">U</span>
-    <span class="letter">I</span>
+    <span class="letter">D</span>
+    <span class="letter">E</span>
+    <span class="letter">N</span>
+    <span class="letter">O</span>
+    <span class="letter">S</span>
+    <span class="letter">O </span>
+    <span class="letter">T</span>
+    <span class="letter">R</span>
+    <span class="letter">O</span>
+    <span class="letter">S</span>
     <span class="letter">;)</span>
   </div>
 </div>
