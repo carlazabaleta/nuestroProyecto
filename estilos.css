@@ -135,7 +135,7 @@ border-bottom: 4px solid #664284;
 }
 
 .background-index{
- background-image:url("FONDO 3.jpg");
+ background-image:url(backg-index.png);
  background-size: cover;
  background-repeat: no-repeat;
 }
