@@ -1,0 +1,721 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*.background-body-login{
+  background:;
+  background-image:url("html.jpg");
+  background-repeat:no-repeat;
+
+
+.nombreproyecto{
+  color: #3f00aa;
+  font-family: sans-serif;
+  font-size: 64px;
+  font-weight: 1000;
+  line-height: 54px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient();
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}}*/
+.container-form{
+  position: relative;
+  background: #33F3FF;
+  width: 100%;
+  max-width: 500px;
+  min-width: 48px auto;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.container-form .toggle{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border-top: 5px solid #7F33FF;
+  border-bottom: 5px solid #7F33FF;
+  cursor: pointer;
+}
+
+.container-form .toggle span{
+  letter-spacing: 1px;
+}
+
+.container-form .toggle:hover{
+  border-top: 5px solid #664284;
+  border-bottom: 5px solid #664284;
+}
+
+.container-form.h2{
+  margin: 0 0 28px 0;
+  font-size: 400;
+  line-height: 1;
+}
+
+.container-form input[type="text"],
+.container-form input[type="password"],
+.container-form input[type="email"]{
+  outline: none;
+  background: #EAE6EE;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: black;
+  border:none;
+  border-radius: 2px;
+  border-bottom: 4px solid #7F33FF;
+  font-size: 14px;
+  font-weight: normal;
+  margin:0 0 20px 0;
+}
+
+.container-form input[type="text"]:focus,
+.container-form input[type="password"]:focus,
+.container-form input[type="email"]:focus{
+border-bottom: 4px solid #664284;
+}
+
+.container-form input[type="submit"]{
+  background: #664284;
+  color: #fff;
+  border:none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-form input[type="submit"]:hover {
+  background:#D8C0ED  ;
+}
+
+.container-form .reset-password{
+  background:#a1a2e4 ;
+  color: #fff;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container-form .reset-password a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container-form .formulario{
+  padding: 40px;
+  display: none;
+}
+
+.container-form .formulario:nth-child(2){
+  display: block;
+}
+
+.popup{
+  background-color:rgb(97,81,149);
+  color: #fff;
+  border-radius: 15px;
+  border: none;
+  padding: 11px;
+}
+
+.background-index{
+ background-image:url("FONDO 3.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+/* Contenedor del popup */
+.popup {
+    position: relative;
+    top: 450px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* pop-up actual */
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #9999999999;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position:absolute;
+    z-index: 1;
+    bottom: 125%;
+    right:50px;
+}
+
+/* Muestra del Pop-up*/
+.popup .popuptext::after {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #555 transparent transparent transparent;
+}
+
+/* Cambio para mostrar/ocultar el contenedor del pop-up */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Animación del pop-up */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+// based on https://codepen.io/ellgine/pen/EjeXOZ
+
+body {
+  text-align: center;
+  background-color: #1d1f20;
+}
+
+.wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: ;
+  font-size: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+p {
+  font-family: sans-serif;
+  font-size: px;
+  font-weight: 500;
+  color: #eee;
+  opacity: 0.3;
+}
+
+.letter {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#7F33FF,#a1a2e4 );
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.letter:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  word-break: break-all;
+  background-color: #1d1f20;
+}
+
+.letter:nth-child(1):before {
+  content: "1932480675";
+  margin-top: -54px;
+  -webkit-animation-name: letter1;
+          animation-name: letter1;
+  -webkit-animation-duration: 0.66s;
+          animation-duration: 0.66s;
+  -webkit-animation-delay: 0.67s;
+          animation-delay: 0.67s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter1 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter1 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(2):before {
+  content: "8637250194";
+  margin-top: -72px;
+  -webkit-animation-name: letter2;
+          animation-name: letter2;
+  -webkit-animation-duration: 2.1s;
+          animation-duration: 2.1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter2 {
+  from {
+    margin-top: -72px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter2 {
+  from {
+    margin-top: -72px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(3):before {
+  content: "6418709523";
+  margin-top: -24px;
+  -webkit-animation-name: letter3;
+          animation-name: letter3;
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: 0.38s;
+          animation-delay: 0.38s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter3 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter3 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(4):before {
+  content: "3206785914";
+  margin-top: -192px;
+  -webkit-animation-name: letter4;
+          animation-name: letter4;
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter4 {
+  from {
+    margin-top: -192px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter4 {
+  from {
+    margin-top: -192px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(5):before {
+  content: "2701956483";
+  margin-top: -24px;
+  -webkit-animation-name: letter5;
+          animation-name: letter5;
+  -webkit-animation-duration: 0.94s;
+          animation-duration: 0.94s;
+  -webkit-animation-delay: 0.53s;
+          animation-delay: 0.53s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter5 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter5 {
+  from {
+    margin-top: -54px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(6):before {
+  content: "7435801269";
+  margin-top: -192px;
+  -webkit-animation-name: letter6;
+          animation-name: letter6;
+  -webkit-animation-duration: 0.7466666667s;
+          animation-duration: 0.7466666667s;
+  -webkit-animation-delay: 0.79s;
+          animation-delay: 0.79s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter6 {
+  from {
+    margin-top: -192px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter6 {
+  from {
+    margin-top: -192px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(7):before {
+  content: "1502643798";
+  margin-top: -72px;
+  -webkit-animation-name: letter7;
+          animation-name: letter7;
+  -webkit-animation-duration: 0.39s;
+          animation-duration: 0.39s;
+  -webkit-animation-delay: 0.87s;
+          animation-delay: 0.87s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter7 {
+  from {
+    margin-top: -72px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter7 {
+  from {
+    margin-top: -72px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(8):before {
+  content: "4075923186";
+  margin-top: -144px;
+  -webkit-animation-name: letter8;
+          animation-name: letter8;
+  -webkit-animation-duration: 0.9942857143s;
+          animation-duration: 0.9942857143s;
+  -webkit-animation-delay: 0.71s;
+          animation-delay: 0.71s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter8 {
+  from {
+    margin-top: -144px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter8 {
+  from {
+    margin-top: -144px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(9):before {
+  content: "9680125743";
+  margin-top: -216px;
+  -webkit-animation-name: letter9;
+          animation-name: letter9;
+  -webkit-animation-duration: 2.988s;
+          animation-duration: 2.988s;
+  -webkit-animation-delay: 0.17s;
+          animation-delay: 0.17s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter9 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter9 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(10):before {
+  content: "6318547092";
+  margin-top: -120px;
+  -webkit-animation-name: letter10;
+          animation-name: letter10;
+  -webkit-animation-duration: 2.1666666667s;
+          animation-duration: 2.1666666667s;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter10 {
+  from {
+    margin-top: -120px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter10 {
+  from {
+    margin-top: -120px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(11):before {
+  content: "2315409687";
+  margin-top: -216px;
+  -webkit-animation-name: letter11;
+          animation-name: letter11;
+  -webkit-animation-duration: 1.332s;
+          animation-duration: 1.332s;
+  -webkit-animation-delay: 0.63s;
+          animation-delay: 0.63s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter11 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter11 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(12):before {
+  content: "3457610289";
+  margin-top: -96px;
+  -webkit-animation-name: letter12;
+          animation-name: letter12;
+  -webkit-animation-duration: 1.856s;
+          animation-duration: 1.856s;
+  -webkit-animation-delay: 0.42s;
+          animation-delay: 0.42s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter12 {
+  from {
+    margin-top: -96px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter12 {
+  from {
+    margin-top: -96px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(13):before {
+  content: "1645732908";
+  margin-top: -120px;
+  -webkit-animation-name: letter13;
+          animation-name: letter13;
+  -webkit-animation-duration: 2.2333333333s;
+          animation-duration: 2.2333333333s;
+  -webkit-animation-delay: 0.33s;
+          animation-delay: 0.33s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter13 {
+  from {
+    margin-top: -120px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter13 {
+  from {
+    margin-top: -120px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(14):before {
+  content: "3862159740";
+  margin-top: -216px;
+  -webkit-animation-name: letter14;
+          animation-name: letter14;
+  -webkit-animation-duration: 2.016s;
+          animation-duration: 2.016s;
+  -webkit-animation-delay: 0.44s;
+          animation-delay: 0.44s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter14 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter14 {
+  from {
+    margin-top: -216px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(15):before {
+  content: "5017293846";
+  margin-top: -48px;
+  -webkit-animation-name: letter15;
+          animation-name: letter15;
+  -webkit-animation-duration: 0.72s;
+          animation-duration: 0.72s;
+  -webkit-animation-delay: 0.73s;
+          animation-delay: 0.73s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter15 {
+  from {
+    margin-top: -48px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter15 {
+  from {
+    margin-top: -48px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.letter:nth-child(16):before {
+  content: "0951348672";
+  margin-top: -168px;
+  -webkit-animation-name: letter16;
+          animation-name: letter16;
+  -webkit-animation-duration: 1.085s;
+          animation-duration: 1.085s;
+  -webkit-animation-delay: 0.69s;
+          animation-delay: 0.69s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter16 {
+  from {
+    margin-top: -168px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+
+@keyframes letter16 {
+  from {
+    margin-top: -168px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
