@@ -1,0 +1,98 @@
+/*aside , .container, article, section{
+  border-color: red;
+  border-style: dashed;
+}*/
+
+*{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.img-index{
+  background-image: url(../imgs/backg-index.png);
+}
+
+h1{
+  color: rgba(50, 0, 25, 0.9);
+  margin-top:150px;
+  margin-bottom: 30px;
+  padding-left: 50px;
+  text-shadow: 1px 1px black;
+}
+
+.text-index{
+  font-size: 20px;
+  color: rgba(50, 0, 25, 0.9);
+  text-shadow: 1px 1px rgba(50, 0, 50, 0.9);
+  font-weight: bold;
+  padding-left: 75px;
+  margin-bottom: 75px;
+}
+
+.index-btn{
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9));
+}
+
+.img-login-register{
+background-image: url(../imgs/backg-user.jpg);
+background-repeat: no-repeat;
+background-position: center;
+display: fixed;
+background-size: cover;
+}
+
+.padding-form{
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.modal-content{
+  margin-top:75px;
+  background-color: black;
+  opacity: 0.85;
+  padding: 0 25px;
+}
+
+.nav{
+  justify-content: space-between;
+}
+
+/*go-to-top es temporal*/
+.go-to-top{
+  position: fixed;
+  margin-left: 15px;
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9));
+}
+
+.content-to-right{
+  text-align: right;
+}
+
+aside article{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#background_usercard{
+  background-image: linear-gradient(rgba(50, 0, 25, 0.9), rgba(255, 255, 255, 0.9)),
+  url("../imgs/backg-user.jpg");
+}
+
+.backg-nav{
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9))
+}
+
+.login-form{
+  background-image: linear-gradient(rgba(50, 0, 50, 0.9),rgba(50, 0, 25, 0.9)),
+  url("../imgs/bckg-user.jpg");
+}
+
+.icon-size{
+  width: 20px;
+}
+
+#projects{
+  margin-top: 4em;
+}
+
+
+/*-------------------------------------------------------*/
