@@ -10,17 +10,16 @@
     <link rel="stylesheet" href="estilos.css">
   </head>
 
-  <body class="background-index">
+  <body>
 
-<h1 class="nombreproyecto"></h1>
-
-<center>
-<br><br><br>
-<button class="popup" onclick="mostrarMensaje()">ENTRÁ!
-  <span class="popuptext" id="myPopup">
+<div class="background-index">
+  <center>
+  <br><br><br>
+  <button class="popup" onclick="mostrarMensaje()">ÚNITE!
+    <span class="popuptext" id="myPopup">
       <div class="container-form">
       <div class="toggle">
-        <span>Crear Cuenta</span>
+    <span>Crear Cuenta</span>
       </div>
 
     <div class="formulario">
@@ -50,31 +49,101 @@
 </button>
 </center>
 
-
 <div class="wrapper">
   <div class="letters">
-    <span class="letter">A</span>
     <span class="letter">C</span>
-    <span class="letter">E</span>
-    <span class="letter">R</span>
-    <span class="letter">C </span><?= " "?>
-    <span class="letter">A</span>
+    <span class="letter">O</span>
     <span class="letter">D</span>
     <span class="letter">E</span>
-    <span class="letter">N</span>
+    <span class="letter">A </span><?= " "?>
+    <span class="letter">L</span>
     <span class="letter">O</span>
-    <span class="letter">S</span>
-    <span class="letter">O </span>
-    <span class="letter">T</span>
-    <span class="letter">R</span>
-    <span class="letter">O</span>
-    <span class="letter">S</span>
-    <span class="letter">;)</span>
+    <span class="letter"> </span>
+    <span class="letter"></span>
+    <span class="letter"></span>
+    <span class="letter"></span>
+    <span class="letter"></span>
+    <span class="letter">!</span>
+    <span class="letter">!</span>
+    <span class="letter"></span>
+    <span class="letter"></span>
+    <span class="letter"></span>
   </div>
+ </div>
 </div>
 
-    <script  src="js/jquery.js"></script>
-    <script  src="js/bootstrap.min.js"></script>
-    <script  src="js/main.js"></script>
-  </body>
+<div class="segundoBack" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imgs/developer-web-axel-castillo.gif" class="d-block w-100" alt="..." height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="imgs/developer-guide-blog-2.png" class="d-block w-100" alt="..."height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="imgs/designer-developer-1200x616.jpg" class="d-block w-100" alt="..."height="450px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"height="450px">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"height="450px">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<center class="numerotres">
+
+ <h1 class="skills">CONOCE LAS SKILLS/ESPECIALIDADES DE LOS DISTINTOS DEVELOPERS...</h1>
+
+ <div class="divUno">
+
+ </div>
+
+ <div class="divDos">
+
+ </div>
+
+ <div class="divTres">
+
+ </div>
+
+ <div class="divCuatro">
+
+ </div>
+
+ <div class="divCinco">
+
+ </div>
+
+ <div class="divSeis">
+
+ </div>
+
+</center>
+
+<div class="unaP">
+mm
+</div>
+
+<div class="dosP">
+kkk
+</div>
+
+<div class="tresP">
+jkj
+</div>
+
+<script  src="js/jquery.js"></script>
+<script  src="js/bootstrap.min.js"></script>
+<script  src="js/main.js"></script>
+</body>
+
 </html>
