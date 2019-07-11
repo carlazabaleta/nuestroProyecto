@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-require 'database.php';
+
 include "funciones1.php";
 
 //si llegan datos por post...
