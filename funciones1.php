@@ -14,14 +14,6 @@ function validarRegistro($datos)
 {
   $errores = [];
 
-  //quitando espacios bb:)
-  $nombreCompleto = trim($datos["nombreCompleto"]);
-  $usuario = trim($datos["usuario"]);
-  $paisDeNacimiento = trim($datos["paisDeNacimiento "]);
-  $email = trim($datos["email"]);
-  $contrasenia = trim($datos["contrasenia"]);
-  $confirmarcontrasenia = trim($datos["contraseniaConfirmar"]);
-
   //valido cada uno = verifica carla!!!
   if ($nombreCompleto == "") {
     $errores["nombreCompleto"] = "Completa el nombre";
@@ -42,11 +34,11 @@ function validarRegistro($datos)
     $errores["email"] = "El email ya se encuentra registrado.";
   }
   if ($contrasenia ==""){
-    $errores["password"] = "Completa la contraseña";
+    $errores["contrasenia"] = "Completa la contraseña";
   }
   else if (strlen($contrasenia)>5)
   {
-    $errores["password"] = "La contraseña debe tener mas de 5 letras";
+    $errores["contrasenia"] = "La contraseña debe tener mas de 5 letras";
 
   }
 //  else if ($contrasenia)
@@ -54,7 +46,7 @@ function validarRegistro($datos)
 //      $errores["password"] = "La contraseña debe tener las letras DH MAYUSCULA Y SEGUIDAS";
 //    }
   else if($contrasenia != $confirmarcontrasenia){
-    $errores["password"] = "Las contraseñas no coinciden";
+    $errores["contrasenia"] = "Las contraseñas no coinciden";
   }
   return $errores;
 }
@@ -77,12 +69,12 @@ function nextId()
 function armarUsuario()
 {
   $usuario =[
-    "id" => nextId(),
-    "nombreCompleto" => trim($_POST["nombreCompleto"]),
-    "usuario" => trim($_POST["usuario"]),
-    "email" => trim($_POST["email"]),
-    "paisDeNacimiento" => trim($_POST["paisDeNacimiento"]),
-    "password" => password_hash($_POST["contrasenia"], PASSWORD_DEFAULT),
+    $id => nextId(),
+    $nombreCompleto => trim($_POST["nombreCompleto"]),
+    $usuario => trim($_POST["usuario"]),
+    $email => trim($_POST["email"]),
+    $paisDeNacimiento => trim($_POST["paisDeNacimiento"]),
+    $contrasenia => password_hash($_POST["contrasenia"], PASSWORD_DEFAULT),
   ];
 
   return $usuario;

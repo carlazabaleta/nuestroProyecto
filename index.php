@@ -4,6 +4,31 @@
 require 'database.php';
 include "funciones1.php";
 
+//si llegan datos por post...
+if($_POST){
+  $usuariosExistentes = file_get_contents("usuarios.json");
+  //los paso de JSON a array asociativo
+  $usuariosExistentes = json_decode($usuariosExistentes,true);
+  //recorro todos los usuarios
+  foreach ($usuariosExistentes as $cadaUsuario) {
+    //si coinciden los emails...
+    if($cadaUsuario['email'] == $_POST['email']){
+      //guardo el usuario encontrado
+      $usuario = $cadaUsuario;
+      if(password_verify($_POST["password"],$usuario["contrasenia"])){
+        session_start();
+        if(isset($_POST["remember"])){
+          setcookie("email",$usuario["email"],time()+3600*24*365*5);
+        }
+        $_SESSION['email'] = $usuario["email"];
+        header("Location:home.php");
+      }
+      break;
+    }
+  }
+  echo "Usuario y/o contraseña inválida.";
+}
+
 $errornombreCompleto = "";
 $errorUsuario = "";
 $errorpaisDeNacimiento = "";
@@ -15,22 +40,126 @@ $hayErrores = false;
 $errores = 0;
 $nombreOk="";
 
-$nombreCompleto = trim($_POST["nombre"]);
-$usuario = trim($_POST["apellido"]);
-$email = trim($_POST["email"]);
-$foto = $_FILES["foto"];
-$contrasenia = trim($_POST["contrasenia"]);
-$confirmarcontrasenia = trim($_POST["contraseniaConfirmar"]);
-$cv = $_FILES["cv"];
-
-
-
 if($_POST){
 
   $errores = validarRegistro($_POST);
 
-  $nombreOk = trim($_POST["nombreCompleto"]);
+  $nombreCompletoOk = trim($_POST["nombreCompleto"]);
+  $usuarioOk= trim($_POST["usuario"]);
+  $emailOk =trim($_POST["email"]);
+  $cv = $_FILES["CV"];
+  $foto = $_FILES["foto"];
+  $paisDeNacimiento=trim($_POST["paisDeNacimiento"]);
+  $contraseniaOk=trim($_POST["contrasenia"]);
+  $confirmarcontrasenia = trim($_POST["contraseniaConfirmar"]);
 }
+
+if ($nombreCompleto == "") {
+  $errornombreCompleto = "Completa el nombre";
+  $hayErrores = true;
+  $errores++;
+}
+if ($usuario == "") {
+  $errorUsuario = "Completa el usuario";
+  $hayErrores = true;
+  $errores++;
+}
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+  $errorEmail = "Email no válido";
+  $hayErrores = true;
+}
+if ($contrasenia ==""){
+$errorContrasenia = "Completa la contraseña";
+$hayErrores = true;
+}
+else if (strlen($contrasenia)<4)
+{
+  $errorContrasenia = "La contraseña debe tener al menos 4 caracteres";
+  $hayErrores = true;
+}else if($contrasenia != $confirmarcontrasenia){
+  $errorContrasenia = "Las contraseñas no coinciden";
+  $hayErrores = true;
+}
+
+
+
+if(isset($_FILES["foto"])){
+  //si el dato de error es OK...
+  if($_FILES["foto"]["error"] === UPLOAD_ERR_OK){
+    //guardo el nombre del archivo
+    $nombreFoto = $_FILES["foto"]["name"];
+    //guardo el nombre temporal del archivo
+    $origen = $_FILES["foto"]["tmp_name"];
+    //uso la informacion del path que es la url, para tomar y guardar la extension
+    $ext = pathinfo($nombreFoto,PATHINFO_EXTENSION);
+
+    $destino = "";
+    $destino = $destino."archivos/";
+    //genero la ruta donde guardo el archivo
+    $destino = $destino.$nombre."fotodeperfil.".$ext;
+
+    //guardo el archivo con esta funcion
+    move_uploaded_file($origen,$destino);
+    $errorFoto = "archivo subido con exito";
+  }
+
+}else{
+    $errorFoto = "error con la foto";
+    $hayErrores = true;
+}
+
+
+if(isset($_FILES["cv"])){
+  //si el dato de error es OK...
+  if($_FILES["CV"]["error"] === UPLOAD_ERR_OK){
+    //guardo el nombre del archivo
+    $nombreCV = $_FILES["CV"]["name"];
+    //guardo el nombre temporal del archivo
+    $origenCV = $_FILES["CV"]["tmp_name"];
+    //uso la informacion del path que es la url, para tomar y guardar la extension
+    $extCV = pathinfo($nombreCV,PATHINFO_EXTENSION);
+
+
+    $destinoCV = "";
+    $destinoCV = $destinoCV."archivos/";
+    //genero la ruta donde guardo el archivo
+    $destinoCV = $destinoCV.$nombreCV."CV.".$extCV;
+
+    //guardo el archivo con esta funcion
+    move_uploaded_file($origenCV,$destinoCV);
+    $errorCV = "archivo subido con exito";
+  }
+}else{
+    $errorCV = "error con el CV";
+    $hayErrores = true;
+
+}
+
+if(!$errores){
+  $usuario= armarUsuario();
+  guardarUsuario($usuario);
+  //ARMO UN ARRAY ASOCIATIVO DEL USUARIO CON SUS DATOS YA VALIDADOS
+  $usuario = [
+  "nombreCompleto"=> $nombreCompleto,
+  "usuario" => $usuario,
+  "email"=> $email,
+  "foto" => $nombre."fotodeperfil.".$ext,
+  "CV" => $nombre."CV.".$extCV,
+  "contrasenia" => password_hash($contrasenia, PASSWORD_DEFAULT)
+  ];
+  $usuariosExistentes = file_get_contents('usuarios.json');
+  $usuariosExistentes = json_decode($usuariosExistentes,true);
+  $usuariosExistentes[] = $usuario;
+  $usuariosEnJson = json_encode($usuariosExistentes);
+  file_put_contents('usuarios.json',$usuariosEnJson);
+  echo "<h2>Gracias por su registro!</h2>";
+  $usuariosExistentes = file_get_contents('usuarios.json');
+  $usuariosExistentes = json_decode($usuariosExistentes,true);
+  var_dump($usuariosExistentes);
+  exit;
+ }
+
+
  ?>
 
 <html lang="en" dir="ltr">
