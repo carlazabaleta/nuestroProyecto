@@ -4,6 +4,13 @@
 
 include "funciones1.php";
 
+$nombreCompleto = "";
+$usuario = "";
+$paisDeNacimiento = "";
+$email = "";
+$foto = "";
+$CV = "";
+$contrasenia = "";
 //si llegan datos por post...
 if($_POST){
   $usuariosExistentes = file_get_contents("usuarios.json");
@@ -342,6 +349,8 @@ if(!$errores){
     <figure><img src="imgs/img5.jpg"></figure>
   </div>
 </div>
+
+
 
 
 <script  src="js/jquery.js"></script>
