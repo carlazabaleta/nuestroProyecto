@@ -159,7 +159,6 @@ if(!$errores){
   exit;
  }
 
-
  ?>
 
 <html lang="en" dir="ltr">
@@ -249,7 +248,6 @@ if(!$errores){
       <div class="reset-password">
         <a href="#">Olvide mi contraseña </a>
       </div>
-
              </div>
 
       <div class="background-footer">
