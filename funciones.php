@@ -42,7 +42,7 @@ function validarPassword($password){
     $validUserPassword=false;
     $mensaje=$mensaje."La contraseña no puede contener espacios.<br>";
   }
-  if(strpos($password,"DH")==false){
+  if(strpos($password,"DH")===true){
     $validUserPassword=false;
     $mensaje=$mensaje."La contraseña debe contener lo siguiente: DH.";
   }
@@ -101,17 +101,19 @@ function addUser(){
 function login($user, $pass){
   $fileName = 'usuarios.json';
   $usuarioEmail= $user;
-  $jsonFile = file_get_contents($fileName);
-  $jsonArray = json_decode($jsonFile,true);
+  if(file_exists($fileName)){
+    $jsonFile = file_get_contents($fileName);
+    $jsonArray = json_decode($jsonFile,true);
 
-  foreach ($jsonArray as $userData) {
-    if ($userData['usuario'] === $usuarioEmail || $userData['email'] === $usuarioEmail) {
-      if (password_verify($pass,$userData['password'])) {
-        return true;
+    foreach ($jsonArray as $userData) {
+      if ($userData['usuario'] === $usuarioEmail || $userData['email'] === $usuarioEmail) {
+        if (password_verify($pass,$userData['password'])) {
+          return true;
+        }
       }
     }
+    return false;
   }
-  return false;
 }
 
 function createRememberUser(){
