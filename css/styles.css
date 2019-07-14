@@ -1,0 +1,49 @@
+.welcome-user-img{
+  width: cover;
+  max-width: 60%;
+  max-height: 40vh;
+
+border-style: solid;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: black;
+}
+
+.padding-img-user-welcome{
+  padding: 3vh 0vw;
+  margin-top:3vh;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+}
+
+.letter {
+  display: inline-block;
+  font-family: 'Ubuntu' ,sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  color:transparent;
+  animation:puff-in-center .7s cubic-bezier(.175,.885,.32,1.275) both;
+}
+
+@keyframes puff-in-center {
+  0% {
+    font-family: 'Ubuntu' ,sans-serif;
+    text-shadow: 0px 0px black;
+    transform: scale(2);
+    filter: blur(2px);
+    opacity: 0;
+    color:transparent;
+  }
+  100% {
+    font-family: 'Ubuntu' ,sans-serif;
+    text-shadow: 2px 2px 10px black;
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    color:#ccc2ff;
+  }
+}
