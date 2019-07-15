@@ -38,11 +38,11 @@ function validarPassword($password){
     $validUserPassword=false;
     $mensaje=$mensaje."La contraseña debe tener más de 5 caracteres.<br>";
   }
-  if(strpos($password," ") != false){
+  if(strpos($password," ") !== false){
     $validUserPassword=false;
     $mensaje=$mensaje."La contraseña no puede contener espacios.<br>";
   }
-  if(strpos($password,"DH")===true){
+  if(strpos($password,"DH") === false){
     $validUserPassword=false;
     $mensaje=$mensaje."La contraseña debe contener lo siguiente: DH.";
   }
